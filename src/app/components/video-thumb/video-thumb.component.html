@@ -1,0 +1,10 @@
+<mat-card (click)="handleSelect()">
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{thumbnail.url}}" width="{{thumbnail.width}}" height="{{thumbnail.height}}" alt="Image no found">
+  <mat-card-content>
+    <p><b><i>Published: {{publishedAt.split('T')[0]}}</i></b></p>
+    <p>{{description.lenght > 150 ? description.substring(0, 150) + '...' : description}}</p>
+  </mat-card-content>
+</mat-card>

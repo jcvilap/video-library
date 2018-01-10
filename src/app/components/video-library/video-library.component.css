@@ -1,0 +1,28 @@
+
+.search-container {
+  text-align: center;
+}
+
+.list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  overflow-y: auto;
+  height: calc(100vh - 165px);
+  flex-wrap: wrap;
+  background-color: #2f2f2f;
+  align-content: flex-start;
+  padding-bottom: 15px;
+}
+
+.input-container {
+  margin-top: 10px;
+  width: 40%;
+}
+
+.mat-paginator {
+  font-size: 17px;
+  color: rgba(0,0,0,0.8);
+  background-color: #f96b72;
+}
