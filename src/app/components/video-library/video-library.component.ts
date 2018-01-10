@@ -32,7 +32,6 @@ export class VideoLibraryComponent implements OnInit {
     });
 
     this.handleNewData = this.handleNewData.bind(this);
-    this.handleError = this.handleError.bind(this);
   }
 
   ngOnInit() {
@@ -46,8 +45,7 @@ export class VideoLibraryComponent implements OnInit {
       this.q = search;
     }
     this.videoLibraryService.getVideos(this.q, this.pageInfo)
-      .subscribe(this.handleNewData)
-      .catch(this.handleError);
+      .subscribe(this.handleNewData);
   }
 
   handleNewData({items, pageInfo, nextPageToken, prevPageToken}) {
@@ -72,9 +70,5 @@ export class VideoLibraryComponent implements OnInit {
     }
     this.pageNumber = pageIndex;
     this.getData(this.q);
-  }
-
-  handleError(error: HttpErrorResponse) {
-    console.error('An error occurred:', error.error);
   }
 }
